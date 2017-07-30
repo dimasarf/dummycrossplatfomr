@@ -16,28 +16,28 @@ namespace MyFirstCrossPlatform
     public partial class DashboardMaster : ContentPage
     {
         public ListView ListView;
-
+        
         public DashboardMaster()
         {
             InitializeComponent();
-
+            
             BindingContext = new DashboardMasterViewModel();
             ListView = MenuItemsListView;
+            
         }
 
         class DashboardMasterViewModel : INotifyPropertyChanged
         {
             public ObservableCollection<DashboardMenuItem> MenuItems { get; set; }
-
+            
             public DashboardMasterViewModel()
             {
                 MenuItems = new ObservableCollection<DashboardMenuItem>(new[]
                 {
-                    new DashboardMenuItem { Id = 0, Title = "Page 1" },
-                    new DashboardMenuItem { Id = 1, Title = "Page 2" },
-                    new DashboardMenuItem { Id = 2, Title = "Page 3" },
-                    new DashboardMenuItem { Id = 3, Title = "Page 4" },
-                    new DashboardMenuItem { Id = 4, Title = "Page 5" },
+                    new DashboardMenuItem { Id = 0, Title = "Grid Test", TargetType=typeof(GridTest)},
+                    new DashboardMenuItem { Id = 1, Title = "Logout", TargetType = typeof(NavigationPage) },
+                    
+                    
                 });
             }
 

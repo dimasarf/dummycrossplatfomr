@@ -12,10 +12,24 @@ namespace MyFirstCrossPlatform
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Dashboard : MasterDetailPage
     {
+        private static string name;
+
         public Dashboard()
         {
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+            
+        }
+
+        public static string Username
+        {
+            get { return name; }
+        }
+        public Dashboard(string text)
+        {
+            InitializeComponent();
+            MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+            name = text;            
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

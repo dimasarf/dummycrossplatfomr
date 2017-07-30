@@ -9,7 +9,7 @@
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
       <ListView.Header>
-        <Grid BackgroundColor="#03A9F4">
+                <Grid BackgroundColor="#34495e">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
@@ -17,15 +17,17 @@
           </Grid.ColumnDefinitions>
           <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="10"/>
           </Grid.RowDefinitions>
           <Label
               Grid.Column="1"
-              Grid.Row="2"
-              Text="AppName"
-              Style="{DynamicResource SubtitleStyle}"/>
+              Grid.Row="1"
+              Text="Test"
+              FontSize="Large"
+              TextColor="White"
+              Style="{DynamicResource SubtitleStyle}"></Label>
         </Grid>
       </ListView.Header>
       <ListView.ItemTemplate>
@@ -35,7 +37,8 @@
               <Label VerticalOptions="FillAndExpand" 
                     VerticalTextAlignment="Center" 
                     Text="{Binding Title}" 
-                    FontSize="24"/>
+                    FontSize="24"
+                     x:Name="lblNama"/>
             </StackLayout>
           </ViewCell>
         </DataTemplate>
