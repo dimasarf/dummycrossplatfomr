@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstCrossPlatform.MainPage">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Login" >
+        <ScrollView>
+            <StackLayout Padding="60,250,60,200" BackgroundColor="#34495e">
+                <Frame CornerRadius="20" BackgroundColor="White">
+                    <StackLayout Padding="20">
+                        <Entry Placeholder="Username" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
+                        <Entry Placeholder="Password" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" IsPassword="True" FontSize="Large"/>
+                        <Button Text="Login" TextColor="White" BackgroundColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>    
+    </ContentPage>
+    
+    <ContentPage Title="Register" >
+        <ScrollView>
+            <StackLayout Spacing="0" Padding="60" BackgroundColor="#34495e">
+                <Frame CornerRadius="20" BackgroundColor="White">
+                    <StackLayout Padding="20">
+                        <Entry Placeholder="Username" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
+                        <Entry Placeholder="Password" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" IsPassword="True" FontSize="Large"/>
+                        <Entry Placeholder="Email" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
+                        <Button Text="Login" TextColor="White" BackgroundColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+</TabbedPage>
