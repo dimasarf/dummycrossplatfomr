@@ -3,7 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstCrossPlatform.DashboardDetail"
              Title="Detail">
-  <StackLayout Padding="10">
-    <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."/>
-  </StackLayout>
+    <StackLayout BackgroundColor="FloralWhite" Padding="20">
+        <Grid HeightRequest="800" RowSpacing="10" ColumnSpacing="10" Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Frame Grid.Column="0" Grid.Row="0" BackgroundColor="#f1c40f">
+                <Button Text="Clickme" VerticalOptions="Center" BackgroundColor="White" TextColor="#f1c40f"></Button>
+            </Frame>
+            <Frame Grid.Column="1" Grid.Row="0" BackgroundColor="#3498db">
+                <Button Text="Clickme" VerticalOptions="Center" BackgroundColor="White" TextColor="#3498db"></Button>
+            </Frame>
+            <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="#8e44ad">
+                <Button Text="Clickme" BackgroundColor="White" TextColor="#8e44ad" VerticalOptions="Center"></Button>
+            </Frame>
+            <Frame Grid.Column="1" Grid.Row="1" BackgroundColor="#e74c3c">
+                <Button Text="Clickme" VerticalOptions="Center" BackgroundColor="White" TextColor="#e74c3c"></Button>
+            </Frame>
+        </Grid>
+    </StackLayout>
+    
 </ContentPage>

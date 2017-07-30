@@ -16,5 +16,10 @@ namespace MyFirstCrossPlatform
         {
             InitializeComponent();
         }
+
+        private async void BoxView_Focused(object sender, FocusEventArgs e)
+        {
+            
+        }
     }
 }
