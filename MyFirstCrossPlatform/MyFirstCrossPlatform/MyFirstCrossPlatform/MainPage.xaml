@@ -6,13 +6,14 @@
     <ContentPage Title="Login" >
         <ScrollView>
             <StackLayout Padding="60,250,60,200" BackgroundColor="#34495e">
-
-                <Image x:Name="logo" />
+                <Grid Padding="0,-165,0,-45">
+                    <Image Source="https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"  VerticalOptions="CenterAndExpand"/>
+                </Grid>
                 <Frame CornerRadius="20" BackgroundColor="White">
                     <StackLayout Padding="20">
-                        <Entry Placeholder="Username" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
-                        <Entry Placeholder="Password" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" IsPassword="True" FontSize="Large"/>
-                        <Button Text="Login" TextColor="White" BackgroundColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
+                        <Entry x:Name="txtUser" Placeholder="Username" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
+                        <Entry x:Name="txtPassword" Placeholder="Password" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" IsPassword="True" FontSize="Large"/>
+                        <Button x:Name="btnLogin" Text="Login" TextColor="White" BackgroundColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large" Clicked="btnLogin_Clicked"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>
@@ -22,12 +23,15 @@
     <ContentPage Title="Register" >
         <ScrollView>
             <StackLayout Padding="60,250,60,200" BackgroundColor="#34495e">
-                <Frame CornerRadius="20" BackgroundColor="White">
+                <Grid Padding="0,-165,0,-45">
+                    <Image Source="https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"  VerticalOptions="CenterAndExpand"/>
+                </Grid>
+                <Frame CornerRadius="20"  BackgroundColor="White">
                     <StackLayout Padding="20">
                         <Entry Placeholder="Username" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
                         <Entry Placeholder="Password" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" IsPassword="True" FontSize="Large"/>
                         <Entry Placeholder="Email" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
-                        <Button Text="Login" TextColor="White" BackgroundColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
+                        <Button Text="Sign Up" TextColor="White" BackgroundColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>

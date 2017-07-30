@@ -13,7 +13,7 @@ namespace MyFirstCrossPlatform
         {
             InitializeComponent();
 
-            MainPage = new MyFirstCrossPlatform.MainPage();
+            MainPage = new NavigationPage(new MyFirstCrossPlatform.MainPage());
         }
 
         protected override void OnStart()

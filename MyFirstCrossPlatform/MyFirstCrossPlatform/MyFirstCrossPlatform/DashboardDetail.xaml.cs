@@ -10,17 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace MyFirstCrossPlatform
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : TabbedPage
+    public partial class DashboardDetail : ContentPage
     {
-        public MainPage()
+        public DashboardDetail()
         {
             InitializeComponent();
-           
-        }
-
-        private async void btnLogin_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Dashboard());
         }
     }
 }
