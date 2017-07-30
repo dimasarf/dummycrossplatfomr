@@ -15,6 +15,7 @@ namespace MyFirstCrossPlatform
         public MainPage()
         {
             InitializeComponent();
+            logo.Source = ImageSource.FromFile("xamagon.png");
         }
     }
 }

@@ -6,6 +6,8 @@
     <ContentPage Title="Login" >
         <ScrollView>
             <StackLayout Padding="60,250,60,200" BackgroundColor="#34495e">
+
+                <Image x:Name="logo" />
                 <Frame CornerRadius="20" BackgroundColor="White">
                     <StackLayout Padding="20">
                         <Entry Placeholder="Username" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
