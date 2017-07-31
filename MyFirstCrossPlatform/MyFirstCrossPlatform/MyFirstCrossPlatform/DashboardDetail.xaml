@@ -9,21 +9,35 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
+            <Grid.ColumnDefi>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+            </Grid.ColumnDefi  nitions>
             <Frame Grid.Column="0" Grid.Row="0" BackgroundColor="#f1c40f">
-                <Button Text="Clickme" VerticalOptions="Center" BackgroundColor="White" TextColor="#f1c40f"></Button>
+                <StackLayout Padding="30">
+                    <Image Source="https://image.ibb.co/bDSHjk/if_Sed_42_2377448.png" HeightRequest="150"/>
+                    <Button Text="Click Me!" VerticalOptions="Center" BackgroundColor="White" TextColor="#f1c40f" FontSize="Large"></Button>
+                </StackLayout>
             </Frame>
             <Frame Grid.Column="1" Grid.Row="0" BackgroundColor="#3498db">
-                <Button Text="Clickme" VerticalOptions="Center" BackgroundColor="White" TextColor="#3498db"></Button>
+                <StackLayout Padding="30">
+                    <Image Source="https://image.ibb.co/fw1zx5/if_Sed_38_2377446.png" HeightRequest="150"/>
+                    <Button Text="Click Me!" VerticalOptions="Center" BackgroundColor="White" TextColor="#3498db" FontSize="Large"></Button>
+                </StackLayout>
             </Frame>
-            <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="#8e44ad">
-                <Button Text="Clickme" BackgroundColor="White" TextColor="#8e44ad" VerticalOptions="Center"></Button>
+            <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="#2ecc71">
+                <StackLayout Padding="30">
+                    <Image Source="https://thumb.ibb.co/dLG4VQ/if_Sed_15_2377464.png" HeightRequest="150"/>
+                    <Button Text="Click Me!" BackgroundColor="White" TextColor="#2ecc71" VerticalOptions="Center" FontSize="Large"></Button>    
+                </StackLayout>
+                
             </Frame>
             <Frame Grid.Column="1" Grid.Row="1" BackgroundColor="#e74c3c">
-                <Button Text="Clickme" VerticalOptions="Center" BackgroundColor="White" TextColor="#e74c3c"></Button>
+                <StackLayout Padding="30">
+                    <Image Source="https://image.ibb.co/iLDtqQ/if_Sed_23_2377460_1.png" HeightRequest="150"/>
+                    <Button Text="Click Me!" VerticalOptions="Center" BackgroundColor="White" TextColor="#e74c3c" FontSize="Large"></Button>
+                </StackLayout>
+                
             </Frame>
         </Grid>
     </StackLayout>

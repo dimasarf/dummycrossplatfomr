@@ -35,7 +35,7 @@ namespace MyFirstCrossPlatform
                 MenuItems = new ObservableCollection<DashboardMenuItem>(new[]
                 {
                     new DashboardMenuItem { Id = 0, Title = "Grid Test", TargetType=typeof(GridTest)},
-                    new DashboardMenuItem { Id = 1, Title = "Logout", TargetType = typeof(NavigationPage) },
+                    new DashboardMenuItem { Id = 1, Title = "Logout", TargetType = typeof(DashboardDetail) },
                     
                     
                 });
