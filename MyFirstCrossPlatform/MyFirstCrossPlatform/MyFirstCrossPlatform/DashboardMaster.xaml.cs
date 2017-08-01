@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,12 +33,15 @@ namespace MyFirstCrossPlatform
             
             public DashboardMasterViewModel()
             {
+                var imageurl = new Uri("https://image.ibb.co/d5Kmuk/user.png");
+                
                 MenuItems = new ObservableCollection<DashboardMenuItem>(new[]
                 {
-                    new DashboardMenuItem { Id = 0, Title = "Grid Test", TargetType=typeof(GridTest)},
-                    new DashboardMenuItem { Id = 1, Title = "Logout", TargetType = typeof(DashboardDetail) },
-                    
-                    
+                    new DashboardMenuItem { Id = 0, Title = "Color Pallete", TargetType=typeof(GridTest), Icon="https://image.ibb.co/jWrYqQ/layers.png"},
+                    new DashboardMenuItem { Id = 1, Title = "Home", TargetType = typeof(DashboardDetail), Icon ="https://image.ibb.co/gP6SH5/home.png"},
+
+
+
                 });
             }
 

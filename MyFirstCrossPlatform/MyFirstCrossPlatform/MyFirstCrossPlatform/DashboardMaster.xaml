@@ -10,38 +10,49 @@
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
       <ListView.Header>
-                <Grid BackgroundColor="#34495e">
+         <Grid BackgroundColor="#34495e" RowSpacing="0" Padding="20,30,20,30">
           <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="10"/>
+            
+            
           </Grid.ColumnDefinitions>
           <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>            
           </Grid.RowDefinitions>
-          <Label
-              Grid.Column="1"
-              Grid.Row="1"
+            <Image Source="https://image.ibb.co/d5Kmuk/user.png" Grid.Row="0" Grid.Column="0" HeightRequest="100"/>
+            
+             <Label
+              Grid.Column="0"
+              Grid.Row="1"  
               Text="Test"
               FontSize="Large"
               TextColor="White"
+              VerticalOptions="CenterAndExpand"
+              HorizontalOptions="CenterAndExpand"
               Style="{DynamicResource SubtitleStyle}"></Label>
+       
+             
         </Grid>
       </ListView.Header>
       <ListView.ItemTemplate>
         <DataTemplate>
-          <ViewCell>
+            <ImageCell Text="{Binding Title}" ImageSource="{Binding Icon}" TextColor="#34495e"/>
+            <!--<ViewCell>
+                        
             <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
-              <Label VerticalOptions="FillAndExpand" 
-                    VerticalTextAlignment="Center" 
-                    Text="{Binding Title}" 
-                    FontSize="24"
-                     x:Name="lblNama"/>
+             <Grid Padding="30,10,0,-10">
+                 
+                
+                 <Label VerticalOptions="FillAndExpand" 
+                 VerticalTextAlignment="Center"
+                 Text="{Binding Title}" 
+                 FontSize="24"
+                 x:Name="lblNama"/>
+            </Grid>               
+             
             </StackLayout>
-          </ViewCell>
+          </ViewCell>-->
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

@@ -2,17 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstCrossPlatform.DashboardDetail"
-             Title="Detail">
+             Title="Home">
     <StackLayout BackgroundColor="FloralWhite" Padding="20">
         <Grid HeightRequest="800" RowSpacing="10" ColumnSpacing="10" Padding="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefi>
+            <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefi  nitions>
+            </Grid.ColumnDefinitions>
             <Frame Grid.Column="0" Grid.Row="0" BackgroundColor="#f1c40f">
                 <StackLayout Padding="30">
                     <Image Source="https://image.ibb.co/bDSHjk/if_Sed_42_2377448.png" HeightRequest="150"/>
