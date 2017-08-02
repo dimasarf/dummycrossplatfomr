@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstCrossPlatform
+namespace MyFirstCrossPlatform.EmployeeApp
 {
-    public interface IFileHelper
+    public interface ILocalFileHelper
     {
-        string GetLocalFilePath(string filename);
+        string GetLocalPath(string FileName);
     }
 }

@@ -48,10 +48,12 @@
       <DependentUpon>DashboardMaster.xaml</DependentUpon>
     </Compile>
     <Compile Include="DashboardMenuItem.cs" />
+    <Compile Include="EmployeeApp\Employee.cs" />
+    <Compile Include="EmployeeApp\EmployeeDatabase.cs" />
+    <Compile Include="EmployeeApp\ILocalFileHelper.cs" />
     <Compile Include="GridTest.xaml.cs">
       <DependentUpon>GridTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IFileHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
