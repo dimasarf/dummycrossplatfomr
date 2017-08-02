@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstCrossPlatform.EmployeeApp.EmployeePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#34495e" Padding="40">
+            <Image Source="https://image.ibb.co/gopcLQ/team.png" HeightRequest="150" ></Image>
+            <StackLayout BackgroundColor="White" Padding="30">
+                <Entry Placeholder="Employee Name" VerticalOptions="Center" Text="{Binding EmployeeName}"/>
+                <Entry Placeholder="Designation" VerticalOptions="Center" Text="{Binding Designation}"/>
+                <Entry Placeholder="Age" VerticalOptions="Center" Text="{Binding Age}"/>
+                <Button Text="Submit" VerticalOptions="Center" TextColor="White" BackgroundColor="#2980b9" x:Name="btnSubmit" Clicked="BtnSubmit_Clicked"/>
+                <Button Text="Cancel" VerticalOptions="Center" TextColor="White" BackgroundColor="#c0392b" x:Name="btnCancel" Clicked="BtnCancel_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

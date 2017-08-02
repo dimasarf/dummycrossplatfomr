@@ -2,8 +2,12 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstCrossPlatform.Dashboard"
-             xmlns:pages="clr-namespace:MyFirstCrossPlatform">
-
+             xmlns:pages="clr-namespace:MyFirstCrossPlatform"
+                  NavigationPage.HasBackButton="False"
+                  NavigationPage.HasNavigationBar="False">
+    <MasterDetailPage.ToolbarItems>
+        <ToolbarItem Text="Log Out" Order="Primary" Clicked="ToolbarItem_Clicked"/>
+    </MasterDetailPage.ToolbarItems>
     <MasterDetailPage.Master>
         <pages:DashboardMaster x:Name="MasterPage" />
   </MasterDetailPage.Master>

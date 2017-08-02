@@ -15,7 +15,7 @@ namespace MyFirstCrossPlatform
         public MainPage()
         {
             InitializeComponent();
-           
+         
         }
 
         private async void btnLogin_Clicked(object sender, EventArgs e)

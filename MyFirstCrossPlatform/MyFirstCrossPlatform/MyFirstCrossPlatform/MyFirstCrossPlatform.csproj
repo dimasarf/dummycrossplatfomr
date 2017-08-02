@@ -50,6 +50,12 @@
     <Compile Include="DashboardMenuItem.cs" />
     <Compile Include="EmployeeApp\Employee.cs" />
     <Compile Include="EmployeeApp\EmployeeDatabase.cs" />
+    <Compile Include="EmployeeApp\EmployeeListPage.xaml.cs">
+      <DependentUpon>EmployeeListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeApp\EmployeePage.xaml.cs">
+      <DependentUpon>EmployeePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeApp\ILocalFileHelper.cs" />
     <Compile Include="GridTest.xaml.cs">
       <DependentUpon>GridTest.xaml</DependentUpon>
@@ -124,6 +130,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GridTest.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmployeeApp\EmployeeListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmployeeApp\EmployeePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

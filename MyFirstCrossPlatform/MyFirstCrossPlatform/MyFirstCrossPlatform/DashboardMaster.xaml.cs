@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFirstCrossPlatform.EmployeeApp;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -39,9 +40,7 @@ namespace MyFirstCrossPlatform
                 {
                     new DashboardMenuItem { Id = 0, Title = "Color Pallete", TargetType=typeof(GridTest), Icon="https://image.ibb.co/jWrYqQ/layers.png"},
                     new DashboardMenuItem { Id = 1, Title = "Home", TargetType = typeof(DashboardDetail), Icon ="https://image.ibb.co/gP6SH5/home.png"},
-
-
-
+                    new DashboardMenuItem{Id = 2, Title ="Employee List", TargetType = typeof(EmployeeListPage), Icon="https://image.ibb.co/hQAnn5/clipboard.png"}
                 });
             }
 
@@ -56,5 +55,7 @@ namespace MyFirstCrossPlatform
             }
             #endregion
         }
+
+       
     }
 }

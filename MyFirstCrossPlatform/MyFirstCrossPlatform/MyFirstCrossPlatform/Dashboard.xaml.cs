@@ -46,5 +46,10 @@ namespace MyFirstCrossPlatform
 
             MasterPage.ListView.SelectedItem = null;
         }
+
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }
