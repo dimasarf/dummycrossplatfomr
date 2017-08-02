@@ -39,18 +39,14 @@
         <DataTemplate>
             <ImageCell Text="{Binding Title}" ImageSource="{Binding Icon}" TextColor="#34495e"/>
             <!--<ViewCell>
-                        
             <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
              <Grid Padding="30,10,0,-10">
-                 
-                
                  <Label VerticalOptions="FillAndExpand" 
                  VerticalTextAlignment="Center"
                  Text="{Binding Title}" 
                  FontSize="24"
                  x:Name="lblNama"/>
-            </Grid>               
-             
+            </Grid>             
             </StackLayout>
           </ViewCell>-->
         </DataTemplate>
