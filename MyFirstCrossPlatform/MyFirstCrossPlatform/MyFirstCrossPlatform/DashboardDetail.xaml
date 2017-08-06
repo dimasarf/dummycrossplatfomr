@@ -4,7 +4,7 @@
              x:Class="MyFirstCrossPlatform.DashboardDetail"
              Title="Home"
              NavigationPage.HasBackButton="False">
-    <StackLayout BackgroundColor="FloralWhite" Padding="20">
+    <StackLayout BackgroundColor="#ffefd5" Padding="20">
         <Grid HeightRequest="800" RowSpacing="10" ColumnSpacing="10" Padding="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>

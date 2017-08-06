@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Android.Content;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,25 @@ namespace MyFirstCrossPlatform.EmployeeApp
     {
         public EmployeePage()
         {
-            InitializeComponent();
+            InitializeComponent();          
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            //var gesture = sender as TapGestureRecognizer;
+            //var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions() { });
+            //if (photo != null)
+            //    empImage.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
+            await DisplayAlert("Hello", "Fuck Yourself!", ":((");
+           
+        }
+
+        private bool IsEmpty()
+        {
+            if (txtName.Text.Length == 0)
+                return false;
+            else
+                return true;
         }
 
         private async void BtnSubmit_Clicked(object sender, EventArgs e)
@@ -26,6 +45,8 @@ namespace MyFirstCrossPlatform.EmployeeApp
 
         private async void BtnCancel_Clicked(object sender, EventArgs e)
         {
+            var image = new Intent();
+            
             await Navigation.PopAsync();
         }
     }

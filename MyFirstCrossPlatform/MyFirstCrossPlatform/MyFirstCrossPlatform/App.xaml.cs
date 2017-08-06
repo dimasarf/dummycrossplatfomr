@@ -1,4 +1,5 @@
 ﻿using MyFirstCrossPlatform.EmployeeApp;
+using MyFirstCrossPlatform.UserAccount;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,23 +11,32 @@ namespace MyFirstCrossPlatform
 {
     public partial class App : Application
     {
-        static EmployeeDatabase _db;
+        static EmployeeDatabase _employeeDb;
+        static AccountDatabase _accountDb;
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new MyFirstCrossPlatform.MainPage());
+            MainPage = new NavigationPage(new MainPage() {BindingContext = new Account() });
         }
 
+        public static AccountDatabase AccountDb
+        {
+            get
+            {
+                if (_accountDb == null)
+                    _accountDb = new AccountDatabase(DependencyService.Get<ILocalFileHelper>().GetLocalPath("Account.db3"));
+                return _accountDb;
+            }
+        }
         public static EmployeeDatabase Database
         {
             get
             {
-                if (_db == null)
+                if (_employeeDb == null)
                 {
-                    _db = new EmployeeDatabase(DependencyService.Get<ILocalFileHelper>().GetLocalPath("Employee.db3"));
+                    _employeeDb = new EmployeeDatabase(DependencyService.Get<ILocalFileHelper>().GetLocalPath("Employee.db3"));
                 }
-                return _db;
+                return _employeeDb;
             }
         }
 

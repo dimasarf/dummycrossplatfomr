@@ -5,22 +5,28 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add Employee"  Order="Default" Clicked="Toolbar_Clicked"/>
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-        
+    <ContentPage.Content> 
         <StackLayout BackgroundColor="#34495e">
-            
-          
-            <Frame VerticalOptions="FillAndExpand">
-                <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand">
-                    <ListView x:Name="EmployeeList" HorizontalOptions="FillAndExpand" VerticalOptions="Center" ItemSelected="EmployeeList_ItemSelected">
-                        <ListView.ItemTemplate>
-                            <DataTemplate >
-                                <TextCell Text="{Binding EmployeeName}" Detail="{Binding Designation}"  Height="100"></TextCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </StackLayout>
-            </Frame>
+            <!--<StackLayout BackgroundColor="White" VerticalOptions="Center">-->
+            <ListView x:Name="EmployeeList"  ItemSelected="EmployeeList_ItemSelected" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="42,20,42,15">
+                                <Frame CornerRadius="15" OutlineColor="Black">
+                                    <StackLayout>
+                                        <Image Source="https://image.ibb.co/d5Kmuk/user.png" HeightRequest="60" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Text="{Binding EmployeeName}" TextColor="Black" FontSize="Large" HorizontalOptions="CenterAndExpand"></Label>
+                                        <Label Text="{Binding Designation}" TextColor="Black" FontSize="Large" HorizontalOptions="CenterAndExpand"></Label>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                        <!--<TextCell Text="{Binding EmployeeName}" Detail="{Binding Designation}"  Height="150"> </TextCell>-->
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
+        <!--</StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

@@ -2,42 +2,66 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstCrossPlatform.MainPage"
-            NavigationPage.HasBackButton="False">
+            NavigationPage.HasBackButton="False"
+            BackgroundImage="b1.jpg">
   <!--Pages can be added as references or inline-->
     <ContentPage Title="Login" >
-        
-        <ScrollView>
-            <StackLayout Padding="60,250,60,200" BackgroundColor="#34495e">
-                <Grid Padding="0,-165,0,-45">
-                    <Image Source="https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"  VerticalOptions="CenterAndExpand"/>
-                </Grid>
-                <Frame CornerRadius="20" BackgroundColor="White">
-                    <StackLayout Padding="20">
-                        <Entry x:Name="txtUser" Placeholder="Username" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
-                        <Entry x:Name="txtPassword" Placeholder="Password" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" IsPassword="True" FontSize="Large"/>
-                        <Button x:Name="btnLogin" Text="Login" TextColor="White" BackgroundColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large" Clicked="btnLogin_Clicked"/>
-                    </StackLayout>
-                </Frame>
-            </StackLayout>
-        </ScrollView>    
+        <Grid >
+            <Image Source="https://image.ibb.co/g4XRjv/Snowflake_Macro_Orange_Background_Android_Wallpaper.jpg" Aspect="Fill"/>
+            <ScrollView>
+                <StackLayout Padding="60,250,60,200">
+                    <Grid Padding="0,-165,0,-45">
+                        <Image Source="https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"  VerticalOptions="CenterAndExpand" Opacity="0.8" />
+                    </Grid>
+                    <Frame CornerRadius="20" BackgroundColor="Transparent" >
+                        <StackLayout Padding="20">
+                            <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                                <Image Source="https://image.ibb.co/g9hGma/if_profle_1055000.png" Opacity="0.5" HeightRequest="40"></Image>
+                                <Entry x:Name="txtUser" Placeholder="Username" PlaceholderColor="White" VerticalOptions="CenterAndExpand" FontSize="Large" BackgroundColor="Transparent" FontFamily="Ubuntu-light" Opacity="0.8" HorizontalOptions="FillAndExpand" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                                <Image Source="https://image.ibb.co/dTCDzv/if_key_1055040.png" Opacity="0.5" HeightRequest="40"></Image>
+                                <Entry x:Name="txtPassword" Placeholder="Password" PlaceholderColor="White" VerticalOptions="CenterAndExpand" IsPassword="True" FontSize="Large" BackgroundColor="Transparent" FontFamily="Ubuntu-light" HorizontalOptions="FillAndExpand" Opacity="0.8"/>
+                            </StackLayout>
+                            
+                            <Button x:Name="btnLogin" Text="Login" TextColor="White" BackgroundColor="#34495e"  VerticalOptions="CenterAndExpand" FontSize="Large" Clicked="btnLogin_Clicked" Opacity="0.7"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
     </ContentPage>
     
     <ContentPage Title="Register" >
-        <ScrollView>
-            <StackLayout Padding="60,250,60,200" BackgroundColor="#34495e">
-                <Grid Padding="0,-165,0,-45">
-                    <Image Source="https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"  VerticalOptions="CenterAndExpand"/>
-                </Grid>
-                <Frame CornerRadius="20"  BackgroundColor="White">
-                    <StackLayout Padding="20">
-                        <Entry Placeholder="Username" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
-                        <Entry Placeholder="Password" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" IsPassword="True" FontSize="Large"/>
-                        <Entry Placeholder="Email" PlaceholderColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
-                        <Button Text="Sign Up" TextColor="White" BackgroundColor="#34495e" VerticalOptions="CenterAndExpand" FontSize="Large"/>
-                    </StackLayout>
-                </Frame>
-            </StackLayout>
-        </ScrollView>
+        <Grid >
+            <Image Source="https://image.ibb.co/g4XRjv/Snowflake_Macro_Orange_Background_Android_Wallpaper.jpg" Aspect="Fill"/>
+            <ScrollView>
+                <StackLayout Padding="60,250,60,200">
+                    <Grid Padding="0,-165,0,-45">
+                        <Image Source="https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"  VerticalOptions="CenterAndExpand" Opacity="0.8" />
+                    </Grid>
+                    <Frame CornerRadius="20" BackgroundColor="Transparent" >
+                        <StackLayout Padding="20">
+                            <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                                <Image Source="https://image.ibb.co/g9hGma/if_profle_1055000.png" Opacity="0.5" HeightRequest="40"></Image>
+                                <Entry Text="{Binding Username}" Placeholder="Username" PlaceholderColor="White" VerticalOptions="CenterAndExpand" FontSize="Large" BackgroundColor="Transparent" FontFamily="Ubuntu-light" Opacity="0.8" HorizontalOptions="FillAndExpand" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+
+                                <Image Source="https://image.ibb.co/dTCDzv/if_key_1055040.png" Opacity="0.5" HeightRequest="40"></Image>
+                                <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="White" VerticalOptions="CenterAndExpand" IsPassword="True" FontSize="Large" BackgroundColor="Transparent" FontFamily="Ubuntu-light" HorizontalOptions="FillAndExpand" Opacity="0.8"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                                <Image Source="https://image.ibb.co/bXpMma/if_briefcase_1055106.png" Opacity="0.5" HeightRequest="40"></Image>
+                                <Entry x:Name="txtEmail" Placeholder="Email" PlaceholderColor="White" VerticalOptions="CenterAndExpand" FontSize="Large" BackgroundColor="Transparent" FontFamily="Ubuntu-light" HorizontalOptions="FillAndExpand" Opacity="0.8"/>
+                            </StackLayout>
+
+                            <Button x:Name="btnSignUp" Text="Sign Up!" TextColor="White" BackgroundColor="#34495e"  VerticalOptions="CenterAndExpand" FontSize="Large" Clicked="btnLogin_Clicked" Opacity="0.7"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
     </ContentPage>
 
 </TabbedPage>

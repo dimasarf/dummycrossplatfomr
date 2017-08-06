@@ -23,8 +23,8 @@
             <RowDefinition Height="*"/>            
           </Grid.RowDefinitions>
             <Image Source="https://image.ibb.co/d5Kmuk/user.png" Grid.Row="0" Grid.Column="0" HeightRequest="100"/>
-            
-             <Label
+
+                    <Label
               Grid.Column="0"
               Grid.Row="1"  
               Text="Test"
@@ -33,9 +33,7 @@
               VerticalOptions="CenterAndExpand"
               HorizontalOptions="CenterAndExpand"
               Style="{DynamicResource SubtitleStyle}"></Label>
-       
-             
-        </Grid>
+         </Grid>
       </ListView.Header>
       <ListView.ItemTemplate>
                 <DataTemplate>

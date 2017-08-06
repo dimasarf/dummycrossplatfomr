@@ -4,9 +4,13 @@
              x:Class="MyFirstCrossPlatform.EmployeeApp.EmployeePage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#34495e" Padding="40">
-            <Image Source="https://image.ibb.co/gopcLQ/team.png" HeightRequest="150" ></Image>
+            <Image Source="https://image.ibb.co/gopcLQ/team.png" HeightRequest="150" x:Name="empImage">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
+            </Image>
             <StackLayout BackgroundColor="White" Padding="30">
-                <Entry Placeholder="Employee Name" VerticalOptions="Center" Text="{Binding EmployeeName}"/>
+                <Entry Placeholder="Employee Name" VerticalOptions="Center" Text="{Binding EmployeeName}" x:Name="txtName"/>
                 <Entry Placeholder="Designation" VerticalOptions="Center" Text="{Binding Designation}"/>
                 <Entry Placeholder="Age" VerticalOptions="Center" Text="{Binding Age}"/>
                 <Button Text="Submit" VerticalOptions="Center" TextColor="White" BackgroundColor="#2980b9" x:Name="btnSubmit" Clicked="BtnSubmit_Clicked"/>
